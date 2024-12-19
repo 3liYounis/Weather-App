@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function weather() {
   return (
-    <View>
-      <Text>weather</Text>
+    <View className='flex-1 items-center justify-center bg-green'>
+      <Text className='font-pextralight'>weather</Text>
     </View>
   )
 }

@@ -4,8 +4,8 @@ export default function Index() {
   return (
     <View className="flex-1 items-center justify-center bg-white"
     >
-      <Text className="text-3xl">Edit app/index.tsx to edit this screen.</Text>
-      <Link href="/weather" style={{color: 'blue'}}> Go to Weather Page </Link>
+      <Text className="text-5xl font-pextrabold">Edit app/index.tsx to edit this screen.</Text>
+      <Link href="/weather" style={{color: '#ff1256'}}> Go to Weather Page </Link>
     </View>
   );
 }
