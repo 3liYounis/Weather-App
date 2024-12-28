@@ -12,7 +12,7 @@ const TabIcon = ({icon, color, name, focused}) => {
         className="w-8 h-8"
       />
       {/* // Text Size is Manually set  */}
-      <Text className={`${focused ? 'font-psemibold' : 'font-pregular'} text-[7.6px] m-auto w-auto`} style={{color: color}}>
+      <Text className={`${focused ? 'font-psemibold' : 'font-pregular'} text-[7.6px] m-auto w-max`} style={{color: color}}>
         {name}
       </Text>
     </View>

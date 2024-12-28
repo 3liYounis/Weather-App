@@ -7,7 +7,7 @@ import search from "../assets/icons/search.png";
 import upload from "../assets/icons/upload.png";
 import rightArrow from "../assets/icons/right-arrow.png";
 import logout from "../assets/icons/logout.png";
-import eyeHide from "../assets/icons/eye-hide.png";
+import closeEye from "../assets/icons/closeEye.png";
 import eye from "../assets/icons/eye.png";
 import play from "../assets/icons/play.png";
 import weather from "../assets/icons/weather.png";
@@ -22,7 +22,7 @@ export default {
   upload,
   rightArrow,
   logout,
-  eyeHide,
+  closeEye,
   eye,
   weather
 };
