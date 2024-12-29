@@ -15,19 +15,20 @@ export default function Index() {
         <View className='items-center justify-center mt-10'>
           <Image
             source={images.logo}
-            className="w-f h-[50px] p-auto"
+            className="w-f h-[120px] p-auto"
             resizeMode="contain"
           />
         </View>
-        <View className='items-center justify-center h-200px w-full mt-20 min-h-[45vh]'>
+        <View className='items-center justify-center h-200px w-full min-h-[45vh]'>
           <Image
-            source={images.cards}
+            source={images.lightning}
             className="w-[450px] h-[450px]"
             resizeMode="contain"
           />
-          <View className="relative justify-center items-center">
+          <View className="relative justify-center items-center mt-10">
             <Text className="text-3xl font-pextrabold color-white text-center">
-              Are You Ready For What Is Coming NEXT?
+              Are You Ready For What Is Coming 
+              <Text className="text-3xl font-pextrabold color-secondary-100 text-center"> NEXT?</Text>
             </Text>
             <CustomButton
               title="Let's GOOOO!"

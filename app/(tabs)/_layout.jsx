@@ -1,10 +1,12 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image,ScrollView } from 'react-native'
 import React from 'react'
 import { Tabs, Redirect} from 'expo-router'
 import {icons} from '../../constants'
+import { StatusBar } from 'expo-status-bar'
 const TabIcon = ({icon, color, name, focused}) => {
   return (
     <View className="items-center justify-center gap-2 pt-5">
+      <StatusBar style="light"/>
       <Image
         source={icon}
         resizeMode="contain"
@@ -12,7 +14,7 @@ const TabIcon = ({icon, color, name, focused}) => {
         className="w-8 h-8"
       />
       {/* // Text Size is Manually set  */}
-      <Text className={`${focused ? 'font-psemibold' : 'font-pregular'} text-[7.6px] m-auto w-max`} style={{color: color}}>
+      <Text className={`${focused ? 'font-pextrabold' : 'font-pregular'} text-[7.6px] m-auto w-max`} style={{color: color}}>
         {name}
       </Text>
     </View>
@@ -42,7 +44,7 @@ const TabsLayout = () => {
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
-                icon={icons.home}
+                icon={icons.dashboard}
                 color={color}
                 name="Home"
                 focused={focused}

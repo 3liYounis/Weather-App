@@ -18,10 +18,13 @@ const SignIn = () => {
       Alert.alert('Error',"Make Sure To Fill All Required Fields.")
     else{
       try{
-        const result = await signIn(form.email,form.password)
-        setUser(result);
-        setIsLoggedIn(true);
-        router.replace("/home")
+        await signIn(form.email,form.password);
+        const result = await getCurrentUser();
+        if (result){
+          setUser(result);
+          setIsLoggedIn(true);
+          router.replace("/home")
+        }
       }
       catch(error){
 
@@ -31,13 +34,13 @@ const SignIn = () => {
   return (
     <SafeAreaView className="bg-primary h-full w-full">
       <ScrollView>
-        <View className="w-full min-h-[85vh] justify-center px-4 my-6 ">
+        <View className="w-full min-h-[85vh] justify-center items-center px-4 mt-10">
           <Image 
             source={images.logo}
+            className="w-[300px] h-[100px]"
             resizemode='contain'
-            className="w-[115px] h-[35px]"
           />
-          <Text className="color-white mt-10 font-semibold text-2xl">Log in to an existing account</Text>
+          <Text className="color-secondary mt-20 font-pextrabold text-2xl">Log In To An Existing Account  :) </Text>
           <FormField
             title ="Email"
             placeholder="Enter Your Email Address"
@@ -52,12 +55,12 @@ const SignIn = () => {
           handleChangeText={(e) => setForm({ ...form, password: e})}
         />
         <CustomButton
-          title="Sign In"
+          title="Sign ME IN!"
           handlePress={submit}
         />
         <View className="justify-center pt-5 flex-row gap-2">
-          <Text className="text-lg color-gray-200 font-pregular"> Don't Have An Account?</Text>
-          <Link href="/signUp" className="text-lg font-psemibold text-secondary-100"> Register NOW!</Link>
+          <Text className="text-lg color-gray-400 font-pregular">Don't Have An Account?</Text>
+          <Link href="/signUp" className="text-lg font-psemibold text-secondary-100">Sign Up</Link>
         </View>
         </View>
       </ScrollView>

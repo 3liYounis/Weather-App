@@ -20,9 +20,11 @@ const SignUp = () => {
     else {
       try{
         const result = await createUser(form.username,form.email,form.password)
-        setUser(result);
-        setIsLoggedIn(true);
-        router.replace("/home")
+        if (result !== undefined){
+          setUser(result);
+          setIsLoggedIn(true);
+          router.replace("/home")
+        }
       }
       catch(error){
         
@@ -33,13 +35,13 @@ const SignUp = () => {
   return (
     <SafeAreaView className="bg-primary h-full w-full">
       <ScrollView>
-        <View className="w-full min-h-[85vh] justify-center px-4 my-6 ">
+        <View className="w-full min-h-[85vh] justify-center items-center px-4 mt-10">
           <Image 
             source={images.logo}
+            className="w-[300px] h-[100px]"
             resizemode='contain'
-            className="w-[115px] h-[35px]"
           />
-          <Text className="color-white mt-10 font-semibold text-2xl">Log in to an existing account</Text>
+          <Text className="color-secondary mt-10 font-pextrabold text-2xl">Create A New Account  :)</Text>
           <FormField
             title ="Username"
             placeholder="Enter Your Username"
@@ -64,8 +66,8 @@ const SignUp = () => {
           handlePress={submit}
         />
         <View className="justify-center pt-5 flex-row gap-2">
-          <Text className="text-lg color-gray-200 font-pregular">Already One Of US?</Text>
-          <Link href="/signIn" className="text-lg font-psemibold text-secondary-100">Sign In!</Link>
+          <Text className="text-lg color-gray-400 font-pregular">Already One Of US?</Text>
+          <Link href="/signIn" className="text-lg font-psemibold text-secondary-100">Sign In</Link>
         </View>
         </View>
       </ScrollView>

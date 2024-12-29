@@ -15,7 +15,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/favicon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#000000"
       },
       "package": "com.ali.weather"
     },
@@ -30,9 +30,9 @@
         "expo-splash-screen",
         {
           "image": "./assets/images/favicon.png",
-          "imageWidth": 200,
+          "imageWidth": 500,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#000000"
         }
       ]
     ],

@@ -7,14 +7,14 @@ const CustomButton = ({ title, handlePress,isLoading }) => {
       activeOpacity={0.7}
       style={styles.button}
     >
-      <Text className="font-pextrabold color-white">{title}</Text>
+      <Text className="font-pextrabold color-white ">{title}</Text>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#d43535',
+    backgroundColor: '#EE8D16',
     borderRadius: 30,
     justifyContent: 'center',
     alignItems: 'center',
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     marginTop: 35,
     justifyContent: 'center',
     alignItems: 'center',
+    width: '75%',
   }
 });
 
